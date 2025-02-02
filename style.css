@@ -36,7 +36,7 @@ body {
 .centered-image {
     display: block;
     margin: 20px auto; /* Centers horizontally */
-    max-width: 80%; /* Ensures it scales properly */
+    max-width: 60%; /* Adjust this if necessary */
     height: auto;
 }
 
@@ -61,3 +61,4 @@ body {
     from { opacity: 1; }
     to { opacity: 0; }
 }
+
