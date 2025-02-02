@@ -15,12 +15,28 @@ document.addEventListener("DOMContentLoaded", function() {
     let index = 0;
     const textElement = document.getElementById("text");
     const imageContainer = document.getElementById("image-container");
-   
+
+    // Show first message instantly
+    textElement.textContent = messages[index];
+
+    // After 2 seconds, show the second message automatically
+    setTimeout(() => {
+        textElement.style.opacity = 0;
+        setTimeout(() => {
+            index++;
+            textElement.textContent = messages[index];
+            textElement.style.opacity = 1;
+
+            // Now allow clicking to continue through the rest of the messages
+            textElement.addEventListener("click", updateText);
+        }, 500);
+    }, 2000);
+
     function updateText() {
-        if (index < messages.length) {
+        if (index < messages.length - 1) {
             textElement.style.opacity = 0;
             setTimeout(() => {
-                textElement.textContent = messages[index++];
+                textElement.textContent = messages[++index];
                 textElement.style.opacity = 1;
             }, 500);
         } else {
@@ -31,12 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 500);
         }
     }
-
-    // Display the first message immediately
-    textElement.textContent = messages[index++];
-    setTimeout(updateText, 2000); // Automatically transition to the second message after 2s
-
-    textElement.addEventListener("click", updateText);
 
     function displayFinalMessage() {
         const catGif = new Image();
