@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "For things that we're passionate about, a part of me feels like I lost that a long time ago. But you remind me why passion is so important for purpose.",
         "And I love getting to see you live your purpose."
     ];
-   
+
     let index = 0;
     const textElement = document.getElementById("text");
     const imageContainer = document.getElementById("image-container");
@@ -35,14 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
     function displayFinalMessage() {
         // Create GIF element
         const catGif = document.createElement("img");
-        catGif.src = './cat-heart.gif'; // Make sure this file exists
+        catGif.src = './cat-heart.gif'; // Ensure this file exists
         catGif.alt = 'Cat Heart';
         catGif.classList.add("big-gif", "fade-in");
 
         // Create text under GIF
         const finalText = document.createElement("p");
         finalText.textContent = "I love you Lili";
-        finalText.classList.add("final-text");
+        finalText.classList.add("final-text", "fade-in");
 
         // Append GIF and text to container
         imageContainer.appendChild(catGif);
