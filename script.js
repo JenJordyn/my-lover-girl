@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
     function displayFinalMessage() {
         // Create GIF element
         const catGif = document.createElement("img");
-        catGif.src = './cat-heart.gif'; // Make sure this file exists
+        catGif.src = './cat-heart.gif'; // Ensure this file exists
         catGif.alt = 'Cat Heart';
-        catGif.classList.add("big-gif", "fade-in");
+        catGif.classList.add("small-gif", "fade-in");
 
         // Create text under GIF
         const finalText = document.createElement("p");
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const liliImage = document.createElement("img");
                 liliImage.src = './Lili.jpg'; // Ensure this file exists
                 liliImage.alt = 'Lili';
-                liliImage.classList.add("centered-image", "fade-in");
+                liliImage.classList.add("normal-image", "fade-in");
 
                 imageContainer.appendChild(liliImage);
             }, 1000); // Wait for fade-out animation
