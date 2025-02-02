@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "For things that we're passionate about, a part of me feels like I lost that a long time ago. But you remind me why passion is so important for purpose.",
         "And I love getting to see you live your purpose."
     ];
-
+   
     let index = 0;
     const textElement = document.getElementById("text");
     const imageContainer = document.getElementById("image-container");
@@ -26,23 +26,23 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             textElement.style.opacity = 0;
             setTimeout(() => {
-                textElement.style.display = "none";
-                displayFinalMessage();
+                textElement.style.display = "none"; // Hide text
+                showGifAndText(); // Now show GIF and final message
             }, 500);
         }
     });
 
-    function displayFinalMessage() {
+    function showGifAndText() {
         // Create GIF element
         const catGif = document.createElement("img");
-        catGif.src = './cat-heart.gif'; // Ensure this file exists
+        catGif.src = './cat-heart.gif'; // Make sure this file exists
         catGif.alt = 'Cat Heart';
         catGif.classList.add("big-gif", "fade-in");
 
         // Create text under GIF
         const finalText = document.createElement("p");
         finalText.textContent = "I love you Lili";
-        finalText.classList.add("final-text", "fade-in");
+        finalText.classList.add("final-text");
 
         // Append GIF and text to container
         imageContainer.appendChild(catGif);
@@ -60,10 +60,4 @@ document.addEventListener("DOMContentLoaded", function() {
                 const liliImage = document.createElement("img");
                 liliImage.src = './Lili.jpg'; // Ensure this file exists
                 liliImage.alt = 'Lili';
-                liliImage.classList.add("centered-image", "fade-in");
-
-                imageContainer.appendChild(liliImage);
-            }, 1000); // Wait for fade-out animation
-        });
-    }
-});
+                liliImage.classList.add("centered-image", "fade
