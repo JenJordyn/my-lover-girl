@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function displayFinalMessage() {
         // Create GIF element
-        const catGif = new Image();
-        catGif.src = './cat-heart.gif'; // Ensure this file exists
+        const catGif = document.createElement("img");
+        catGif.src = './cat-heart.gif'; // Make sure this file exists
         catGif.alt = 'Cat Heart';
-        catGif.classList.add("centered-image", "fade-in", "big-gif");
+        catGif.classList.add("big-gif", "fade-in");
 
-        // Create "I love you Lili" text
+        // Create text under GIF
         const finalText = document.createElement("p");
         finalText.textContent = "I love you Lili";
         finalText.classList.add("final-text");
@@ -48,16 +48,16 @@ document.addEventListener("DOMContentLoaded", function() {
         imageContainer.appendChild(catGif);
         imageContainer.appendChild(finalText);
 
-        // Add click event to fade out GIF and text, then show Lili.jpg
+        // When GIF is clicked, fade it out and show Lili.jpg
         catGif.addEventListener("click", function() {
             catGif.classList.add("fade-out");
             finalText.classList.add("fade-out");
 
             setTimeout(() => {
-                imageContainer.innerHTML = ""; // Remove everything inside
+                imageContainer.innerHTML = ""; // Clear the container
 
-                // Add Lili.jpg
-                const liliImage = new Image();
+                // Create Lili.jpg element
+                const liliImage = document.createElement("img");
                 liliImage.src = './Lili.jpg'; // Ensure this file exists
                 liliImage.alt = 'Lili';
                 liliImage.classList.add("centered-image", "fade-in");
