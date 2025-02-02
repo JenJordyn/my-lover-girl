@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const catGif = new Image();
         catGif.src = './cat-heart.gif'; // Ensure this file exists
         catGif.alt = 'Cat Heart';
-        catGif.classList.add("centered-image", "fade-in", "bigger-gif");
+        catGif.classList.add("centered-image", "fade-in", "big-gif");
 
         // Create "I love you Lili" text
         const finalText = document.createElement("p");
@@ -54,8 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
             finalText.classList.add("fade-out");
 
             setTimeout(() => {
-                imageContainer.removeChild(catGif);
-                imageContainer.removeChild(finalText);
+                imageContainer.innerHTML = ""; // Remove everything inside
 
                 // Add Lili.jpg
                 const liliImage = new Image();
