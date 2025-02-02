@@ -10,17 +10,22 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    flex-direction: column; /* Ensure items are stacked vertically */
+    flex-direction: column; /* Ensures content stacks vertically */
 }
 
 #container {
     text-align: center;
     max-width: 80%; /* Limit the text width for better readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #text {
     font-size: 2em;
     transition: opacity 0.5s ease-in-out;
+    line-height: 1.6; /* Adds spacing between lines for readability */
 }
 
 #image-container {
