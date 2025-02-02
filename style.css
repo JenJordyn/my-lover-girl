@@ -10,12 +10,12 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    flex-direction: column; /* Ensures items are stacked vertically */
+    flex-direction: column;
 }
 
 #container {
     text-align: center;
-    max-width: 80%; /* Limit the text width for better readability */
+    max-width: 80%;
 }
 
 #text {
@@ -23,7 +23,6 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Styles for the image container */
 #image-container {
     display: flex;
     flex-direction: column;
@@ -32,12 +31,24 @@ body {
     margin-top: 20px;
 }
 
-/* Ensures images (GIF & Lili.jpg) are centered properly */
 .centered-image {
     display: block;
-    margin: 20px auto; /* Centers horizontally */
-    max-width: 60%; /* Adjust this if necessary */
+    margin: 20px auto;
+    max-width: 60%;
     height: auto;
+}
+
+/* Make the GIF bigger */
+.bigger-gif {
+    max-width: 250px; /* Adjust the size here */
+}
+
+/* Styling for the final text */
+.final-text {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
 }
 
 /* Fade-in animation */
@@ -61,4 +72,3 @@ body {
     from { opacity: 1; }
     to { opacity: 0; }
 }
-
