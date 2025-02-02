@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (index < messages.length - 1) {
             textElement.style.opacity = 0;
             setTimeout(() => {
-                textElement.innerHTML = messages[++index]; // Use innerHTML to force an update
+                textElement.innerHTML = messages[++index];
                 textElement.style.opacity = 1;
             }, 500);
         } else {
@@ -35,23 +35,31 @@ document.addEventListener("DOMContentLoaded", function() {
     function displayFinalMessage() {
         // Create GIF element
         const catGif = new Image();
-        catGif.src = './cat-heart.gif'; // Ensure this file exists in the correct directory
+        catGif.src = './cat-heart.gif'; // Ensure this file exists
         catGif.alt = 'Cat Heart';
-        catGif.classList.add("centered-image", "fade-in");
+        catGif.classList.add("centered-image", "fade-in", "bigger-gif");
 
-        // Append GIF to container
+        // Create "I love you Lili" text
+        const finalText = document.createElement("p");
+        finalText.textContent = "I love you Lili";
+        finalText.classList.add("final-text");
+
+        // Append GIF and text to container
         imageContainer.appendChild(catGif);
+        imageContainer.appendChild(finalText);
 
-        // Add click event to fade out GIF and show Lili.jpg
+        // Add click event to fade out GIF and text, then show Lili.jpg
         catGif.addEventListener("click", function() {
-            catGif.classList.add("fade-out"); // Apply fade-out effect
+            catGif.classList.add("fade-out");
+            finalText.classList.add("fade-out");
 
             setTimeout(() => {
-                imageContainer.removeChild(catGif); // Remove the GIF
+                imageContainer.removeChild(catGif);
+                imageContainer.removeChild(finalText);
 
                 // Add Lili.jpg
                 const liliImage = new Image();
-                liliImage.src = './Lili.jpg'; // Ensure this file exists in the correct directory
+                liliImage.src = './Lili.jpg'; // Ensure this file exists
                 liliImage.alt = 'Lili';
                 liliImage.classList.add("centered-image", "fade-in");
 
