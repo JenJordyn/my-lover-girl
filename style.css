@@ -13,15 +13,17 @@ body {
     flex-direction: column;
 }
 
-/* Text Container */
-.text {
-    font-size: 2em;
+#container {
+    text-align: center;
     max-width: 80%;
+}
+
+#text {
+    font-size: 2em;
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Image Container */
-.image-container {
+#image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,25 +31,41 @@ body {
     margin-top: 20px;
 }
 
-/* Cat GIF Styling */
-.cat-gif {
-    width: 200px; /* Adjusted size */
+/* Make the GIF larger */
+.big-gif {
+    width: 300px;  /* Adjust size */
     height: auto;
     display: block;
     margin: 20px auto;
-    cursor: pointer;
 }
 
-/* "I love you Lili" Text */
-.love-text {
-    font-size: 2em;
+/* Style for "I love you Lili" text */
+.final-text {
+    font-size: 1.8em;
+    text-align: center;
     margin-top: 10px;
+    color: white;
 }
 
-/* Lili Image */
-.lili-image {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    display: none; /* Initially hidden */
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Fade-out animation */
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
