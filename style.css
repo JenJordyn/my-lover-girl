@@ -10,6 +10,17 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
+    flex-direction: column; /* Ensure items are stacked vertically */
+}
+
+#container {
+    text-align: center;
+    max-width: 80%; /* Limit the text width for better readability */
+}
+
+#text {
+    font-size: 2em;
+    transition: opacity 0.5s ease-in-out;
 }
 
 #image-container {
@@ -17,23 +28,5 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-}
-
-#text {
-    font-size: 2em; /* Increased font size */
-    max-width: 80%;
-    transition: opacity 0.5s ease-in-out;
-}
-
-#gif {
-    width: 200px; /* Adjust size as needed */
-    margin-top: 20px;
-    display: none;
-}
-
-#final-text {
-    display: none;
-    font-size: 2em;
     margin-top: 20px;
 }
