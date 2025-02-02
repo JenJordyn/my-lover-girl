@@ -31,16 +31,12 @@ body {
     margin-top: 20px;
 }
 
-.centered-image {
+/* Center and enlarge the GIF */
+.big-gif {
+    width: 300px;  /* Adjust the size */
+    height: auto;
     display: block;
     margin: 20px auto;
-    max-width: 60%;
-    height: auto;
-}
-
-/* Make the GIF bigger */
-.bigger-gif {
-    max-width: 250px; /* Adjust the size here */
 }
 
 /* Styling for the final text */
