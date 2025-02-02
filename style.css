@@ -13,16 +13,21 @@ body {
     flex-direction: column;
 }
 
+/* Main Container */
 #container {
     text-align: center;
     max-width: 80%;
 }
 
+/* Message Text */
 #text {
     font-size: 2em;
     transition: opacity 0.5s ease-in-out;
+    max-width: 70%;
+    margin: 0 auto;
 }
 
+/* GIF and Image Container */
 #image-container {
     display: flex;
     flex-direction: column;
@@ -31,15 +36,16 @@ body {
     margin-top: 20px;
 }
 
-/* Make the GIF larger */
+/* GIF Styling */
 .big-gif {
-    width: 300px;  /* Adjust size */
+    width: 200px;  /* Adjusted size */
     height: auto;
     display: block;
     margin: 20px auto;
+    cursor: pointer;
 }
 
-/* Style for "I love you Lili" text */
+/* "I love you Lili" Text */
 .final-text {
     font-size: 1.8em;
     text-align: center;
@@ -47,7 +53,16 @@ body {
     color: white;
 }
 
-/* Fade-in animation */
+/* Lili Image */
+.centered-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+/* Fade-in Animation */
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s forwards;
@@ -58,7 +73,7 @@ body {
     to { opacity: 1; }
 }
 
-/* Fade-out animation */
+/* Fade-out Animation */
 .fade-out {
     opacity: 1;
     animation: fadeOut 1s forwards;
@@ -68,4 +83,3 @@ body {
     from { opacity: 1; }
     to { opacity: 0; }
 }
-
