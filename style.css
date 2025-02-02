@@ -10,12 +10,12 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    flex-direction: column;
+    flex-direction: column; /* Ensures items are stacked vertically */
 }
 
 #container {
     text-align: center;
-    max-width: 80%;
+    max-width: 80%; /* Limit the text width for better readability */
 }
 
 #text {
@@ -23,6 +23,7 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
+/* Styles for the image container */
 #image-container {
     display: flex;
     flex-direction: column;
@@ -31,41 +32,36 @@ body {
     margin-top: 20px;
 }
 
-/* Center and size images */
+/* Ensures images (GIF & Lili.jpg) are centered properly */
 .centered-image {
     display: block;
-    margin: 20px auto;
-    max-width: 80%;
+    margin: 20px auto; /* Centers horizontally */
+    max-width: 80%; /* Ensures it scales properly */
     height: auto;
 }
 
-/* Style for "I love you Lili" text */
-.final-text {
-    font-size: 1.8em;
-    text-align: center;
-    margin-top: 10px;
-    color: white;
-}
+/* ---------------------------- */
+/* New CSS for Lili.jpg at the END */
+/* ---------------------------- */
 
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
+/* Lili.jpg is now smaller and has a fade-in effect */
+.lili-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 50%; /* Adjust the size of Lili.jpg */
+    height: auto;
+    opacity: 0; /* Initially hidden */
     animation: fadeIn 1s forwards;
 }
 
+/* Fade-out effect for GIF and text */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade-in keyframe animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
-/* Fade-out animation */
-.fade-out {
-    opacity: 1;
-    animation: fadeOut 1s forwards;
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
