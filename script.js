@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
         "We both know I overthink everything, but watching you go all in on something you love reminds me why it matters to take risks for the things that mean the most. For things that we're passionate about, a part of me feels like I lost that a long time ago. But you remind me why passion is so important for purpose.",
         "And God I love getting to see you pursue your purpose."
     ];
-    
+   
     let index = 0;
     const textElement = document.getElementById("text");
     const imageContainer = document.getElementById("image-container");
-    
+   
     textElement.addEventListener("click", function() {
         if (index < messages.length - 1) {
             textElement.style.opacity = 0;
@@ -25,31 +25,29 @@ document.addEventListener("DOMContentLoaded", function() {
             textElement.style.opacity = 0;
             setTimeout(() => {
                 textElement.style.display = "none";
-                displaycatheart();
+                displayFinalMessage();
             }, 500);
         }
     });
-    
-    // Function to display the cat-heart.gif
-    function displayCatHeart() {
-        imageContainer.innerHTML = ''; // Clear existing content
-        const catHeartImage = new Image();
-        catHeartImage.src = 'images/cat-heart.gif'; // Ensure the file is correctly placed
-        catHeartImage.alt = 'Cat Heart';
-        catHeartImage.style.width = "200px"; // Adjust the size as needed
-        catHeartImage.style.display = "block";
-        catHeartImage.style.margin = "20px auto";
-    
-        // Append the image
-        imageContainer.appendChild(catHeartImage);
-    
-        // Create and append the final text
+   
+    function displayFinalMessage() {
+        // Add GIF
+        const catGif = new Image();
+        catGif.src = './cat-heart.gif'; // Make sure the file is in the same directory
+        catGif.alt = 'Cat Heart';
+        catGif.style.width = "200px";
+        catGif.style.margin = "20px auto";
+        catGif.style.display = "block";
+
+        // Add final text
         const finalText = document.createElement("p");
         finalText.textContent = "I love you Lili";
         finalText.style.fontSize = "2em";
         finalText.style.textAlign = "center";
-        finalText.style.marginTop = "20px";
-    
+        finalText.style.marginTop = "10px";
+
+        // Append to container
+        imageContainer.appendChild(catGif);
         imageContainer.appendChild(finalText);
     }
-}    )
+});
