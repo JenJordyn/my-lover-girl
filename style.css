@@ -31,9 +31,9 @@ body {
     margin-top: 20px;
 }
 
-/* Adjust GIF to be 200px */
+/* Make GIF smaller (150px) */
 .small-gif {
-    width: 200px;
+    width: 150px;
     height: auto;
     display: block;
     margin: 20px auto;
@@ -47,11 +47,11 @@ body {
     color: white;
 }
 
-/* Ensure Lili.jpg appears at its normal size */
+/* Keep Lili.jpg at a reasonable size */
 .normal-image {
-    width: auto; /* Keep natural size */
+    width: 250px; /* Smaller width */
     height: auto;
-    max-width: 100%; /* Prevent overflow */
+    max-width: 80%; /* Prevents it from taking up the whole screen */
     display: block;
     margin: 20px auto;
 }
