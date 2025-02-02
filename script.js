@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let index = 0;
     const textElement = document.getElementById("text");
     const imageContainer = document.getElementById("image-container");
-   
-    textElement.addEventListener("click", function() {
+    let gifDisplayed = false; // Track if the GIF has already been added
+
+    textElement.addEventListener("click", function () {
         if (index < messages.length - 1) {
             textElement.style.opacity = 0;
             setTimeout(() => {
@@ -28,11 +29,14 @@ document.addEventListener("DOMContentLoaded", function() {
             textElement.style.opacity = 0;
             setTimeout(() => {
                 textElement.style.display = "none";
-                displayFinalMessage();
+                if (!gifDisplayed) {
+                    displayFinalMessage();
+                    gifDisplayed = true; // Mark GIF as displayed
+                }
             }, 500);
         }
     });
-   
+
     function displayFinalMessage() {
         // Add GIF
         const catGif = new Image();
