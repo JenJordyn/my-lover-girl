@@ -31,20 +31,29 @@ body {
     margin-top: 20px;
 }
 
-/* Make the GIF larger */
-.big-gif {
-    width: 300px;  /* Adjust size */
+/* Adjust GIF to be 200px */
+.small-gif {
+    width: 200px;
     height: auto;
     display: block;
     margin: 20px auto;
 }
 
-/* Style for "I love you Lili" text */
+/* Keep "I love you Lili" text perfect */
 .final-text {
     font-size: 1.8em;
     text-align: center;
     margin-top: 10px;
     color: white;
+}
+
+/* Ensure Lili.jpg appears at its normal size */
+.normal-image {
+    width: auto; /* Keep natural size */
+    height: auto;
+    max-width: 100%; /* Prevent overflow */
+    display: block;
+    margin: 20px auto;
 }
 
 /* Fade-in animation */
@@ -68,4 +77,3 @@ body {
     from { opacity: 1; }
     to { opacity: 0; }
 }
-
