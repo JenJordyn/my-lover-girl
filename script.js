@@ -35,11 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
     function displayFinalMessage() {
         // Add GIF
         const catGif = new Image();
-        catGif.src = './cat-heart.gif'; // Make sure the file is in the same directory
+        catGif.src = './cat-heart.gif'; // Ensure this file exists
         catGif.alt = 'Cat Heart';
-        catGif.style.width = "200px";
-        catGif.style.margin = "20px auto";
-        catGif.style.display = "block";
+        catGif.classList.add("centered-image"); // Add class to center it
 
         // Add final text
         const finalText = document.createElement("p");
@@ -48,8 +46,17 @@ document.addEventListener("DOMContentLoaded", function() {
         finalText.style.textAlign = "center";
         finalText.style.marginTop = "10px";
 
-        // Append to container
+        // Append GIF and text
         imageContainer.appendChild(catGif);
         imageContainer.appendChild(finalText);
+
+        // Add Lili.jpg image after a short delay
+        setTimeout(() => {
+            const liliImage = new Image();
+            liliImage.src = './Lili.jpg'; // Ensure this file exists
+            liliImage.alt = 'Lili';
+            liliImage.classList.add("centered-image"); // Add class to center it
+            imageContainer.appendChild(liliImage);
+        }, 1000); // Delay ensures Lili.jpg appears after the GIF and text
     }
 });
