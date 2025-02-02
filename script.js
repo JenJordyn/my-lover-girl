@@ -1,7 +1,8 @@
 /* script.js */
 document.addEventListener("DOMContentLoaded", function() {
     const messages = [
-        "Hey Baby, I just want to say that I’m really proud of you.",
+        "Hiiii baby", 
+        "I just want to say that I’m really proud of you.",
         "I see how hard you’ve been working, and even though I can’t be there to watch you perform, I still want to find ways to show my support—so this is just one of those ways.",
         "Every time I get a glimpse of what you do, it kind of puts things into perspective for me.",
         "It’s not that I wish I could do what you do, but more that I know I never could",
