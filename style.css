@@ -31,15 +31,15 @@ body {
     margin-top: 20px;
 }
 
-/* Center and enlarge the GIF */
+/* Make the GIF larger */
 .big-gif {
-    width: 300px;  /* Adjust the size */
+    width: 300px;  /* Adjust size */
     height: auto;
     display: block;
     margin: 20px auto;
 }
 
-/* Styling for the final text */
+/* Style for "I love you Lili" text */
 .final-text {
     font-size: 1.8em;
     text-align: center;
@@ -68,3 +68,4 @@ body {
     from { opacity: 1; }
     to { opacity: 0; }
 }
+
