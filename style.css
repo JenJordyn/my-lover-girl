@@ -13,17 +13,15 @@ body {
     flex-direction: column;
 }
 
-#container {
-    text-align: center;
-    max-width: 80%;
-}
-
-#text {
+/* Text Container */
+.text {
     font-size: 2em;
+    max-width: 80%;
     transition: opacity 0.5s ease-in-out;
 }
 
-#image-container {
+/* Image Container */
+.image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,49 +29,25 @@ body {
     margin-top: 20px;
 }
 
-/* Make GIF smaller (150px) */
-.small-gif {
-    width: 150px;
+/* Cat GIF Styling */
+.cat-gif {
+    width: 200px; /* Adjusted size */
     height: auto;
     display: block;
     margin: 20px auto;
+    cursor: pointer;
 }
 
-/* Keep "I love you Lili" text perfect */
-.final-text {
-    font-size: 1.8em;
-    text-align: center;
+/* "I love you Lili" Text */
+.love-text {
+    font-size: 2em;
     margin-top: 10px;
-    color: white;
 }
 
-/* Keep Lili.jpg at a reasonable size */
-.normal-image {
-    width: 250px; /* Smaller width */
+/* Lili Image */
+.lili-image {
+    max-width: 300px;
+    width: 100%;
     height: auto;
-    max-width: 80%; /* Prevents it from taking up the whole screen */
-    display: block;
-    margin: 20px auto;
-}
-
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Fade-out animation */
-.fade-out {
-    opacity: 1;
-    animation: fadeOut 1s forwards;
-}
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    display: none; /* Initially hidden */
 }
