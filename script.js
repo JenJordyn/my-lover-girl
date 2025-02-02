@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "Every time I get a glimpse of what you do, it kind of puts things into perspective for me.",
         "It’s not that I wish I could do what you do (I think I'd shrivel up from fear), but more that I know I never could",
         "—and I think that’s what makes it so impressive to me.",
-        "We’re all put onto this earth to fulfil a different purpose, and yours is something that takes guts. You choose passion every single day, and that’s something I love about you.",
+        "We’re all put onto this earth to fulfill a different purpose, and yours is something that takes guts. You choose passion every single day, and that’s something I love about you.",
         "We both know I overthink everything, but watching you go all in on something you love reminds me why it matters to take risks for the things that mean the most.",
         "For things that we're passionate about, a part of me feels like I lost that a long time ago. But you remind me why passion is so important for purpose.",
         "And I love getting to see you live your purpose."
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (index < messages.length - 1) {
             textElement.style.opacity = 0;
             setTimeout(() => {
-                textElement.textContent = messages[++index];
+                textElement.innerHTML = messages[++index]; // Use innerHTML to force an update
                 textElement.style.opacity = 1;
             }, 500);
         } else {
@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 500);
         }
     });
-   
+
     function displayFinalMessage() {
         // Create GIF element
         const catGif = new Image();
-        catGif.src = './cat-heart.gif'; // Make sure the file exists
+        catGif.src = './cat-heart.gif'; // Ensure this file exists in the correct directory
         catGif.alt = 'Cat Heart';
         catGif.classList.add("centered-image", "fade-in");
 
@@ -51,10 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 // Add Lili.jpg
                 const liliImage = new Image();
-                liliImage.src = './Lili.jpg'; // Ensure the file exists
+                liliImage.src = './Lili.jpg'; // Ensure this file exists in the correct directory
                 liliImage.alt = 'Lili';
-                liliImage.classList.add("centered-image", "fade-in"); // Apply fade-in effect
+                liliImage.classList.add("centered-image", "fade-in");
 
                 imageContainer.appendChild(liliImage);
-            }, 1000); // Wait for the fade-out effect before replacing
+            }, 1000); // Wait for fade-out animation
         });
+    }
+});
